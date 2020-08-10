@@ -2,7 +2,11 @@ const passport = require("passport");
 
 module.exports = (app, passport)=>{
     app.get('/', (req,res)=>{
-        res.render('index');
+        res.render('index',{title:'Pagina Contenido'});
+    });
+
+    app.get('/logger',(req,res)=>{
+        res.render('logger');
     });
     
     app.get('/login', (req,res)=>{
@@ -38,6 +42,11 @@ module.exports = (app, passport)=>{
     app.get('/logout',(req,res)=>{
         req.logout();
         res.redirect('/');
+    });
+
+    //pagina
+    app.get('/contact',(req,res)=>{
+        res.render('contact', {title:'Contact Page'});
     });
 
 };
