@@ -6,7 +6,7 @@ module.exports = (app, passport)=>{
     });
 
     app.get('/logger',(req,res)=>{
-        res.render('logger');
+        res.render('logger',{title:"Logger"});
     });
     
     app.get('/login', (req,res)=>{
