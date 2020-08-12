@@ -16,6 +16,24 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <canvas id="lienzo" width="250" height="200">Su navegador no soporta canvas :( </canvas>
+                <form name="formu" onSubmit="return false;">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="nodo">
+                    </div>
+                    <div class="form-group">
+                        <submit id="sendNod" class="btn btn-primary btn-block" onclick="arbol()" >
+                            Send Nodo
+                        </submit>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid" id="about">
         <div class="row bg-dark text-white p-5 text-center">
             <div class="col-sm-6">

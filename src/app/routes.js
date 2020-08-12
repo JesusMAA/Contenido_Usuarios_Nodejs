@@ -49,6 +49,21 @@ module.exports = (app, passport)=>{
         res.render('contact', {title:'Contact Page'});
     });
 
+    //contact
+    app.post('/send-email',(req,res)=>{
+        const {email, message} = req.body;
+
+        contentHtml = `
+            <h1>User information</h1>
+            <ul>
+                <li>Email: ${email}</li>
+            </ul>
+            <p>${message}</p>
+        `;
+        console.log(contentHtml);
+        res.send('Received');
+    });
+
 };
 
 function isLoggedIn(req,res,next){
